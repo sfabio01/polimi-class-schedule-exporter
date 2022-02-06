@@ -1,0 +1,39 @@
+{
+    "manifest_version": 2,
+    "name": "Polimi Class Schedule Exporter",
+    "version": "0.3.0",
+    "description": "Questa estensione permette agli studenti del Politecnico di Milano di aggiungere l'orario delle lezioni a Google Calendar",
+    "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "identity",
+        "activeTab",
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www13.ceda.polimi.it/oralez/oralez/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "oauth2": {
+        "client_id": "406453636644-rk3f51d4v60c54044rr1qbaiqhcqlfl7.apps.googleusercontent.com",
+        "scopes": [
+            "https://www.googleapis.com/auth/calendar.events",
+            "https://www.googleapis.com/auth/calendar.calendarlist"
+        ]
+    },
+    "web_accessible_resources": [
+        "convert_page.html"
+    ],
+    "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://www.googleapis.com https://apis.google.com; object-src 'self'",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoKDWqqVq7CLDq1ujJIOnf3vKakh2dZtHn/5vDwBZdhuXyKs9NUwHWEzcvOCwadAQsxxV0aiPNcNprd9LdFYKUs+eGLDxhwmJ+wqyXMjnavz7VDwNDcL9s0MtATGL2qknyzSzFv3ImM4c07JUroLapNDzPrAOUttlSNnii7tjC9KgAl43/yyZ35f5h5VcdVgNuikT9IlO0ttWzFP2qZSfzjrj8v1Gl0lxdFqJwfNXdhYXRiKwp8UnkB8sx55RSJyA52v5nzukqtQbOUckN6bm1hfL7FL/IYqmh8FEZwlFqZOWi6FAT+3x64rujKeyvKFFecltArGkxlU7qK9UjfQg0QIDAQAB"
+}
