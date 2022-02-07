@@ -390,8 +390,6 @@ var app = (function () {
 
     const apiKey = "AIzaSyCsSMdQaKUyK5AfRbmuuJ_lap9b7CDLccg";
 
-    const timeOffset = "+02:00";
-
     const colors = {
         "Pavone": "7",
         "Pomodoro": "11",
@@ -425,8 +423,6 @@ var app = (function () {
         str = str + minutes;
 
         str = str + ":00";
-
-        str = str + timeOffset;
 
         return str;
 
@@ -508,7 +504,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (198:1) {:else}
+    // (200:1) {:else}
     function create_else_block(ctx) {
     	let div;
     	let h1;
@@ -518,9 +514,9 @@ var app = (function () {
     			div = element("div");
     			h1 = element("h1");
     			h1.textContent = "Success";
-    			add_location(h1, file, 199, 3, 4933);
+    			add_location(h1, file, 201, 3, 4959);
     			attr_dev(div, "class", "container");
-    			add_location(div, file, 198, 2, 4906);
+    			add_location(div, file, 200, 2, 4932);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -536,14 +532,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(198:1) {:else}",
+    		source: "(200:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (108:1) {#if !finish}
+    // (110:1) {#if !finish}
     function create_if_block(ctx) {
     	let div8;
     	let div2;
@@ -620,38 +616,38 @@ var app = (function () {
     			b2 = element("b");
     			b2.textContent = "EXPORT TO GOOGLE CALENDAR";
     			attr_dev(div0, "class", "fs-1 fw-bold");
-    			add_location(div0, file, 111, 5, 2794);
+    			add_location(div0, file, 113, 5, 2820);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file, 110, 4, 2771);
+    			add_location(div1, file, 112, 4, 2797);
     			attr_dev(div2, "class", "row text-center");
-    			add_location(div2, file, 109, 3, 2737);
+    			add_location(div2, file, 111, 3, 2763);
     			attr_dev(div3, "class", "row row-cols-2 justify-content-md-center gy-3 mt-1");
     			attr_dev(div3, "id", "subjectList");
-    			add_location(div3, file, 114, 3, 2863);
-    			add_location(b0, file, 162, 7, 4084);
+    			add_location(div3, file, 116, 3, 2889);
+    			add_location(b0, file, 164, 7, 4110);
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "id", "submitBtn");
-    			add_location(button0, file, 158, 5, 3982);
+    			add_location(button0, file, 160, 5, 4008);
     			attr_dev(div4, "class", "col");
-    			add_location(div4, file, 157, 4, 3959);
+    			add_location(div4, file, 159, 4, 3985);
     			attr_dev(div5, "class", "row text-center mt-4 mb-3");
-    			add_location(div5, file, 156, 3, 3915);
-    			add_location(b1, file, 172, 9, 4318);
-    			add_location(h2, file, 172, 5, 4314);
-    			add_location(b2, file, 192, 21, 4817);
+    			add_location(div5, file, 158, 3, 3941);
+    			add_location(b1, file, 174, 9, 4344);
+    			add_location(h2, file, 174, 5, 4340);
+    			add_location(b2, file, 194, 21, 4843);
     			attr_dev(button1, "type", "submit");
     			attr_dev(button1, "class", "btn btn-primary mt-4");
     			attr_dev(button1, "id", "exportBtn");
-    			add_location(button1, file, 188, 5, 4701);
+    			add_location(button1, file, 190, 5, 4727);
     			attr_dev(div6, "class", "col");
     			set_style(div6, "max-width", "fit-content");
-    			add_location(div6, file, 171, 4, 4259);
+    			add_location(div6, file, 173, 4, 4285);
     			attr_dev(div7, "class", "row text-center justify-content-md-center mb-5");
     			attr_dev(div7, "id", "chooseCalendar");
     			div7.hidden = true;
-    			add_location(div7, file, 166, 3, 4151);
+    			add_location(div7, file, 168, 3, 4177);
     			attr_dev(div8, "class", "container");
-    			add_location(div8, file, 108, 2, 2710);
+    			add_location(div8, file, 110, 2, 2736);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div8, anchor);
@@ -756,14 +752,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(108:1) {#if !finish}",
+    		source: "(110:1) {#if !finish}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (123:7) {#if sub == subject}
+    // (125:7) {#if sub == subject}
     function create_if_block_1(ctx) {
     	let div;
     	let t0_value = /*type*/ ctx[24] + "";
@@ -801,7 +797,7 @@ var app = (function () {
     			t10 = text(t10_value);
     			t11 = space();
     			attr_dev(div, "class", "fw-light text-capitalize");
-    			add_location(div, file, 123, 8, 3137);
+    			add_location(div, file, 125, 8, 3163);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -828,14 +824,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(123:7) {#if sub == subject}",
+    		source: "(125:7) {#if sub == subject}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (122:6) {#each lessons as { subject, type, startDate, endDate, room }
+    // (124:6) {#each lessons as { subject, type, startDate, endDate, room }
     function create_each_block_3(ctx) {
     	let if_block_anchor;
     	let if_block = /*sub*/ ctx[16] == /*subject*/ ctx[23] && create_if_block_1(ctx);
@@ -862,14 +858,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(122:6) {#each lessons as { subject, type, startDate, endDate, room }",
+    		source: "(124:6) {#each lessons as { subject, type, startDate, endDate, room }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (150:7) {#each Object.entries(colors) as [name, value]}
+    // (152:7) {#each Object.entries(colors) as [name, value]}
     function create_each_block_2(ctx) {
     	let option;
     	let t_value = /*name*/ ctx[19] + "";
@@ -882,7 +878,7 @@ var app = (function () {
     			option.__value = /*value*/ ctx[20];
     			option.value = option.__value;
     			attr_dev(option, "class", /*name*/ ctx[19]);
-    			add_location(option, file, 150, 8, 3802);
+    			add_location(option, file, 152, 8, 3828);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -898,14 +894,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(150:7) {#each Object.entries(colors) as [name, value]}",
+    		source: "(152:7) {#each Object.entries(colors) as [name, value]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (119:4) {#each subjects as sub}
+    // (121:4) {#each subjects as sub}
     function create_each_block_1(ctx) {
     	let div0;
     	let h4;
@@ -958,15 +954,15 @@ var app = (function () {
     			}
 
     			t3 = space();
-    			add_location(h4, file, 120, 6, 3014);
+    			add_location(h4, file, 122, 6, 3040);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file, 119, 5, 2990);
+    			add_location(div0, file, 121, 5, 3016);
     			attr_dev(select, "id", /*sub*/ ctx[16] + "select");
     			attr_dev(select, "class", "form-select");
     			attr_dev(select, "aria-label", "Select color");
-    			add_location(select, file, 141, 6, 3573);
+    			add_location(select, file, 143, 6, 3599);
     			attr_dev(div1, "class", "col-auto");
-    			add_location(div1, file, 140, 5, 3544);
+    			add_location(div1, file, 142, 5, 3570);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -1059,14 +1055,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(119:4) {#each subjects as sub}",
+    		source: "(121:4) {#each subjects as sub}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:5) {#each calendarList as cal}
+    // (176:5) {#each calendarList as cal}
     function create_each_block(ctx) {
     	let div;
     	let input;
@@ -1091,12 +1087,12 @@ var app = (function () {
     			attr_dev(input, "name", "calendarRadio");
     			attr_dev(input, "id", input_id_value = /*cal*/ ctx[13].id);
     			input.value = input_value_value = /*cal*/ ctx[13].id;
-    			add_location(input, file, 175, 7, 4419);
+    			add_location(input, file, 177, 7, 4445);
     			attr_dev(label, "class", "form-check-label");
     			attr_dev(label, "for", label_for_value = /*cal*/ ctx[13].id);
-    			add_location(label, file, 183, 7, 4586);
+    			add_location(label, file, 185, 7, 4612);
     			attr_dev(div, "class", "form-check");
-    			add_location(div, file, 174, 6, 4387);
+    			add_location(div, file, 176, 6, 4413);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1129,7 +1125,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(174:5) {#each calendarList as cal}",
+    		source: "(176:5) {#each calendarList as cal}",
     		ctx
     	});
 
@@ -1151,7 +1147,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			if_block.c();
-    			add_location(main, file, 106, 0, 2686);
+    			add_location(main, file, 108, 0, 2712);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1199,8 +1195,10 @@ var app = (function () {
     	let url = new URL(window.location.href);
     	let stringParam = url.searchParams.get("lessons");
     	let lessons = JSON.parse(stringParam);
-    	console.log(lessons);
+
+    	// console.log(lessons);
     	var subjects = [];
+
     	var events = [];
     	var subjectColorsId = {};
 
@@ -1227,6 +1225,8 @@ var app = (function () {
 
     		events.push(event);
     	}
+
+    	console.log(events);
 
     	function colorChanged(sub) {
     		let select = document.getElementById(sub + "select");

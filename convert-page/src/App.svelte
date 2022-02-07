@@ -11,7 +11,7 @@
 	let url = new URL(window.location.href);
 	let stringParam = url.searchParams.get("lessons");
 	let lessons = JSON.parse(stringParam);
-	console.log(lessons);
+	// console.log(lessons);
 	var subjects = [];
 	var events = [];
 	var subjectColorsId = {};
@@ -41,6 +41,8 @@
 		};
 		events.push(event);
 	}
+
+	console.log(events);
 
 	function colorChanged(sub) {
 		let select = document.getElementById(sub + "select");

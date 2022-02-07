@@ -1,5 +1,4 @@
 import { apiKey } from "./credentials";
-const timeOffset = "+02:00"
 
 export const colors = {
     "Pavone": "7",
@@ -34,8 +33,6 @@ export function minsToTime(mins) {
     str = str + minutes;
 
     str = str + ":00";
-
-    str = str + timeOffset;
 
     return str;
 
