@@ -1,4 +1,6 @@
 <script>
+	export let name;
+
 	import {
 		minsToTime,
 		colors,

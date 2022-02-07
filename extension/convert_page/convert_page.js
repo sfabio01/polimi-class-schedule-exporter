@@ -476,19 +476,19 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[13] = list[i];
+    	child_ctx[14] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[16] = list[i];
+    	child_ctx[17] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[19] = list[i][0];
+    	child_ctx[0] = list[i][0];
     	child_ctx[20] = list[i][1];
     	return child_ctx;
     }
@@ -504,7 +504,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (200:1) {:else}
+    // (202:1) {:else}
     function create_else_block(ctx) {
     	let div;
     	let h1;
@@ -514,9 +514,9 @@ var app = (function () {
     			div = element("div");
     			h1 = element("h1");
     			h1.textContent = "Success";
-    			add_location(h1, file, 201, 3, 4959);
+    			add_location(h1, file, 203, 3, 4978);
     			attr_dev(div, "class", "container");
-    			add_location(div, file, 200, 2, 4932);
+    			add_location(div, file, 202, 2, 4951);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -532,14 +532,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(200:1) {:else}",
+    		source: "(202:1) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (110:1) {#if !finish}
+    // (112:1) {#if !finish}
     function create_if_block(ctx) {
     	let div8;
     	let div2;
@@ -563,7 +563,7 @@ var app = (function () {
     	let b2;
     	let mounted;
     	let dispose;
-    	let each_value_1 = /*subjects*/ ctx[3];
+    	let each_value_1 = /*subjects*/ ctx[4];
     	validate_each_argument(each_value_1);
     	let each_blocks_1 = [];
 
@@ -571,7 +571,7 @@ var app = (function () {
     		each_blocks_1[i] = create_each_block_1(get_each_context_1(ctx, each_value_1, i));
     	}
 
-    	let each_value = /*calendarList*/ ctx[1];
+    	let each_value = /*calendarList*/ ctx[2];
     	validate_each_argument(each_value);
     	let each_blocks = [];
 
@@ -616,38 +616,38 @@ var app = (function () {
     			b2 = element("b");
     			b2.textContent = "EXPORT TO GOOGLE CALENDAR";
     			attr_dev(div0, "class", "fs-1 fw-bold");
-    			add_location(div0, file, 113, 5, 2820);
+    			add_location(div0, file, 115, 5, 2839);
     			attr_dev(div1, "class", "col");
-    			add_location(div1, file, 112, 4, 2797);
+    			add_location(div1, file, 114, 4, 2816);
     			attr_dev(div2, "class", "row text-center");
-    			add_location(div2, file, 111, 3, 2763);
+    			add_location(div2, file, 113, 3, 2782);
     			attr_dev(div3, "class", "row row-cols-2 justify-content-md-center gy-3 mt-1");
     			attr_dev(div3, "id", "subjectList");
-    			add_location(div3, file, 116, 3, 2889);
-    			add_location(b0, file, 164, 7, 4110);
+    			add_location(div3, file, 118, 3, 2908);
+    			add_location(b0, file, 166, 7, 4129);
     			attr_dev(button0, "class", "btn btn-primary");
     			attr_dev(button0, "id", "submitBtn");
-    			add_location(button0, file, 160, 5, 4008);
+    			add_location(button0, file, 162, 5, 4027);
     			attr_dev(div4, "class", "col");
-    			add_location(div4, file, 159, 4, 3985);
+    			add_location(div4, file, 161, 4, 4004);
     			attr_dev(div5, "class", "row text-center mt-4 mb-3");
-    			add_location(div5, file, 158, 3, 3941);
-    			add_location(b1, file, 174, 9, 4344);
-    			add_location(h2, file, 174, 5, 4340);
-    			add_location(b2, file, 194, 21, 4843);
+    			add_location(div5, file, 160, 3, 3960);
+    			add_location(b1, file, 176, 9, 4363);
+    			add_location(h2, file, 176, 5, 4359);
+    			add_location(b2, file, 196, 21, 4862);
     			attr_dev(button1, "type", "submit");
     			attr_dev(button1, "class", "btn btn-primary mt-4");
     			attr_dev(button1, "id", "exportBtn");
-    			add_location(button1, file, 190, 5, 4727);
+    			add_location(button1, file, 192, 5, 4746);
     			attr_dev(div6, "class", "col");
     			set_style(div6, "max-width", "fit-content");
-    			add_location(div6, file, 173, 4, 4285);
+    			add_location(div6, file, 175, 4, 4304);
     			attr_dev(div7, "class", "row text-center justify-content-md-center mb-5");
     			attr_dev(div7, "id", "chooseCalendar");
     			div7.hidden = true;
-    			add_location(div7, file, 168, 3, 4177);
+    			add_location(div7, file, 170, 3, 4196);
     			attr_dev(div8, "class", "container");
-    			add_location(div8, file, 110, 2, 2736);
+    			add_location(div8, file, 112, 2, 2755);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div8, anchor);
@@ -683,16 +683,16 @@ var app = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(button0, "click", /*continueWithGoogle*/ ctx[6], false, false, false),
-    					listen_dev(button1, "click", /*exportSchedule*/ ctx[7], false, false, false)
+    					listen_dev(button0, "click", /*continueWithGoogle*/ ctx[7], false, false, false),
+    					listen_dev(button1, "click", /*exportSchedule*/ ctx[8], false, false, false)
     				];
 
     				mounted = true;
     			}
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*subjects, colorChanged, Object, colors, lessons, events*/ 60) {
-    				each_value_1 = /*subjects*/ ctx[3];
+    			if (dirty & /*subjects, colorChanged, Object, colors, lessons, events*/ 120) {
+    				each_value_1 = /*subjects*/ ctx[4];
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -715,8 +715,8 @@ var app = (function () {
     				each_blocks_1.length = each_value_1.length;
     			}
 
-    			if (dirty & /*calendarList*/ 2) {
-    				each_value = /*calendarList*/ ctx[1];
+    			if (dirty & /*calendarList*/ 4) {
+    				each_value = /*calendarList*/ ctx[2];
     				validate_each_argument(each_value);
     				let i;
 
@@ -752,14 +752,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(110:1) {#if !finish}",
+    		source: "(112:1) {#if !finish}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (125:7) {#if sub == subject}
+    // (127:7) {#if sub == subject}
     function create_if_block_1(ctx) {
     	let div;
     	let t0_value = /*type*/ ctx[24] + "";
@@ -771,10 +771,10 @@ var app = (function () {
     	let t4_value = /*endDate*/ ctx[26] + "";
     	let t4;
     	let t5;
-    	let t6_value = /*events*/ ctx[4][/*i*/ ctx[29]].start.dateTime.split("T")[1].split("+")[0].substring(0, 5) + "";
+    	let t6_value = /*events*/ ctx[5][/*i*/ ctx[29]].start.dateTime.split("T")[1].split("+")[0].substring(0, 5) + "";
     	let t6;
     	let t7;
-    	let t8_value = /*events*/ ctx[4][/*i*/ ctx[29]].end.dateTime.split("T")[1].split("+")[0].substring(0, 5) + "";
+    	let t8_value = /*events*/ ctx[5][/*i*/ ctx[29]].end.dateTime.split("T")[1].split("+")[0].substring(0, 5) + "";
     	let t8;
     	let t9;
     	let t10_value = /*room*/ ctx[27] + "";
@@ -797,7 +797,7 @@ var app = (function () {
     			t10 = text(t10_value);
     			t11 = space();
     			attr_dev(div, "class", "fw-light text-capitalize");
-    			add_location(div, file, 125, 8, 3163);
+    			add_location(div, file, 127, 8, 3182);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -824,17 +824,17 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(125:7) {#if sub == subject}",
+    		source: "(127:7) {#if sub == subject}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (124:6) {#each lessons as { subject, type, startDate, endDate, room }
+    // (126:6) {#each lessons as { subject, type, startDate, endDate, room }
     function create_each_block_3(ctx) {
     	let if_block_anchor;
-    	let if_block = /*sub*/ ctx[16] == /*subject*/ ctx[23] && create_if_block_1(ctx);
+    	let if_block = /*sub*/ ctx[17] == /*subject*/ ctx[23] && create_if_block_1(ctx);
 
     	const block = {
     		c: function create() {
@@ -846,7 +846,7 @@ var app = (function () {
     			insert_dev(target, if_block_anchor, anchor);
     		},
     		p: function update(ctx, dirty) {
-    			if (/*sub*/ ctx[16] == /*subject*/ ctx[23]) if_block.p(ctx, dirty);
+    			if (/*sub*/ ctx[17] == /*subject*/ ctx[23]) if_block.p(ctx, dirty);
     		},
     		d: function destroy(detaching) {
     			if (if_block) if_block.d(detaching);
@@ -858,17 +858,17 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(124:6) {#each lessons as { subject, type, startDate, endDate, room }",
+    		source: "(126:6) {#each lessons as { subject, type, startDate, endDate, room }",
     		ctx
     	});
 
     	return block;
     }
 
-    // (152:7) {#each Object.entries(colors) as [name, value]}
+    // (154:7) {#each Object.entries(colors) as [name, value]}
     function create_each_block_2(ctx) {
     	let option;
-    	let t_value = /*name*/ ctx[19] + "";
+    	let t_value = /*name*/ ctx[0] + "";
     	let t;
 
     	const block = {
@@ -877,8 +877,8 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = /*value*/ ctx[20];
     			option.value = option.__value;
-    			attr_dev(option, "class", /*name*/ ctx[19]);
-    			add_location(option, file, 152, 8, 3828);
+    			attr_dev(option, "class", /*name*/ ctx[0]);
+    			add_location(option, file, 154, 8, 3847);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -894,18 +894,18 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(152:7) {#each Object.entries(colors) as [name, value]}",
+    		source: "(154:7) {#each Object.entries(colors) as [name, value]}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (121:4) {#each subjects as sub}
+    // (123:4) {#each subjects as sub}
     function create_each_block_1(ctx) {
     	let div0;
     	let h4;
-    	let t0_value = /*sub*/ ctx[16] + "";
+    	let t0_value = /*sub*/ ctx[17] + "";
     	let t0;
     	let t1;
     	let t2;
@@ -914,7 +914,7 @@ var app = (function () {
     	let t3;
     	let mounted;
     	let dispose;
-    	let each_value_3 = /*lessons*/ ctx[2];
+    	let each_value_3 = /*lessons*/ ctx[3];
     	validate_each_argument(each_value_3);
     	let each_blocks_1 = [];
 
@@ -931,7 +931,7 @@ var app = (function () {
     	}
 
     	function change_handler() {
-    		return /*change_handler*/ ctx[8](/*sub*/ ctx[16]);
+    		return /*change_handler*/ ctx[9](/*sub*/ ctx[17]);
     	}
 
     	const block = {
@@ -954,15 +954,15 @@ var app = (function () {
     			}
 
     			t3 = space();
-    			add_location(h4, file, 122, 6, 3040);
+    			add_location(h4, file, 124, 6, 3059);
     			attr_dev(div0, "class", "col");
-    			add_location(div0, file, 121, 5, 3016);
-    			attr_dev(select, "id", /*sub*/ ctx[16] + "select");
+    			add_location(div0, file, 123, 5, 3035);
+    			attr_dev(select, "id", /*sub*/ ctx[17] + "select");
     			attr_dev(select, "class", "form-select");
     			attr_dev(select, "aria-label", "Select color");
-    			add_location(select, file, 143, 6, 3599);
+    			add_location(select, file, 145, 6, 3618);
     			attr_dev(div1, "class", "col-auto");
-    			add_location(div1, file, 142, 5, 3570);
+    			add_location(div1, file, 144, 5, 3589);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div0, anchor);
@@ -992,8 +992,8 @@ var app = (function () {
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
 
-    			if (dirty & /*lessons, events, subjects*/ 28) {
-    				each_value_3 = /*lessons*/ ctx[2];
+    			if (dirty & /*lessons, events, subjects*/ 56) {
+    				each_value_3 = /*lessons*/ ctx[3];
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -1055,14 +1055,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(121:4) {#each subjects as sub}",
+    		source: "(123:4) {#each subjects as sub}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (176:5) {#each calendarList as cal}
+    // (178:5) {#each calendarList as cal}
     function create_each_block(ctx) {
     	let div;
     	let input;
@@ -1070,7 +1070,7 @@ var app = (function () {
     	let input_value_value;
     	let t0;
     	let label;
-    	let t1_value = /*cal*/ ctx[13].summary + "";
+    	let t1_value = /*cal*/ ctx[14].summary + "";
     	let t1;
     	let label_for_value;
 
@@ -1085,14 +1085,14 @@ var app = (function () {
     			attr_dev(input, "class", "form-check-input");
     			attr_dev(input, "type", "radio");
     			attr_dev(input, "name", "calendarRadio");
-    			attr_dev(input, "id", input_id_value = /*cal*/ ctx[13].id);
-    			input.value = input_value_value = /*cal*/ ctx[13].id;
-    			add_location(input, file, 177, 7, 4445);
+    			attr_dev(input, "id", input_id_value = /*cal*/ ctx[14].id);
+    			input.value = input_value_value = /*cal*/ ctx[14].id;
+    			add_location(input, file, 179, 7, 4464);
     			attr_dev(label, "class", "form-check-label");
-    			attr_dev(label, "for", label_for_value = /*cal*/ ctx[13].id);
-    			add_location(label, file, 185, 7, 4612);
+    			attr_dev(label, "for", label_for_value = /*cal*/ ctx[14].id);
+    			add_location(label, file, 187, 7, 4631);
     			attr_dev(div, "class", "form-check");
-    			add_location(div, file, 176, 6, 4413);
+    			add_location(div, file, 178, 6, 4432);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -1102,17 +1102,17 @@ var app = (function () {
     			append_dev(label, t1);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*calendarList*/ 2 && input_id_value !== (input_id_value = /*cal*/ ctx[13].id)) {
+    			if (dirty & /*calendarList*/ 4 && input_id_value !== (input_id_value = /*cal*/ ctx[14].id)) {
     				attr_dev(input, "id", input_id_value);
     			}
 
-    			if (dirty & /*calendarList*/ 2 && input_value_value !== (input_value_value = /*cal*/ ctx[13].id)) {
+    			if (dirty & /*calendarList*/ 4 && input_value_value !== (input_value_value = /*cal*/ ctx[14].id)) {
     				prop_dev(input, "value", input_value_value);
     			}
 
-    			if (dirty & /*calendarList*/ 2 && t1_value !== (t1_value = /*cal*/ ctx[13].summary + "")) set_data_dev(t1, t1_value);
+    			if (dirty & /*calendarList*/ 4 && t1_value !== (t1_value = /*cal*/ ctx[14].summary + "")) set_data_dev(t1, t1_value);
 
-    			if (dirty & /*calendarList*/ 2 && label_for_value !== (label_for_value = /*cal*/ ctx[13].id)) {
+    			if (dirty & /*calendarList*/ 4 && label_for_value !== (label_for_value = /*cal*/ ctx[14].id)) {
     				attr_dev(label, "for", label_for_value);
     			}
     		},
@@ -1125,7 +1125,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(176:5) {#each calendarList as cal}",
+    		source: "(178:5) {#each calendarList as cal}",
     		ctx
     	});
 
@@ -1136,7 +1136,7 @@ var app = (function () {
     	let main;
 
     	function select_block_type(ctx, dirty) {
-    		if (!/*finish*/ ctx[0]) return create_if_block;
+    		if (!/*finish*/ ctx[1]) return create_if_block;
     		return create_else_block;
     	}
 
@@ -1147,7 +1147,7 @@ var app = (function () {
     		c: function create() {
     			main = element("main");
     			if_block.c();
-    			add_location(main, file, 108, 0, 2712);
+    			add_location(main, file, 110, 0, 2731);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -1191,6 +1191,7 @@ var app = (function () {
     function instance($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('App', slots, []);
+    	let { name } = $$props;
     	let finish = false;
     	let url = new URL(window.location.href);
     	let stringParam = url.searchParams.get("lessons");
@@ -1262,7 +1263,7 @@ var app = (function () {
     					return;
     				}
 
-    				$$invalidate(1, calendarList = res);
+    				$$invalidate(2, calendarList = res);
     				document.getElementById("submitBtn").hidden = true;
     				document.getElementById("chooseCalendar").hidden = false;
     			} catch(error) {
@@ -1278,14 +1279,14 @@ var app = (function () {
 
     		try {
     			await sendToGoogleCalendar(events, lessons, subjectColorsId, userToken, calId ?? "primary");
-    			$$invalidate(0, finish = true);
+    			$$invalidate(1, finish = true);
     		} catch(error) {
     			alert(error);
     			document.getElementById("exportBtn").disabled = false;
     		}
     	}
 
-    	const writable_props = [];
+    	const writable_props = ['name'];
 
     	Object_1.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<App> was created with unknown prop '${key}'`);
@@ -1295,7 +1296,12 @@ var app = (function () {
     		colorChanged(sub);
     	};
 
+    	$$self.$$set = $$props => {
+    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    	};
+
     	$$self.$capture_state = () => ({
+    		name,
     		minsToTime,
     		colors,
     		sendToGoogleCalendar,
@@ -1315,14 +1321,15 @@ var app = (function () {
     	});
 
     	$$self.$inject_state = $$props => {
-    		if ('finish' in $$props) $$invalidate(0, finish = $$props.finish);
+    		if ('name' in $$props) $$invalidate(0, name = $$props.name);
+    		if ('finish' in $$props) $$invalidate(1, finish = $$props.finish);
     		if ('url' in $$props) url = $$props.url;
     		if ('stringParam' in $$props) stringParam = $$props.stringParam;
-    		if ('lessons' in $$props) $$invalidate(2, lessons = $$props.lessons);
-    		if ('subjects' in $$props) $$invalidate(3, subjects = $$props.subjects);
-    		if ('events' in $$props) $$invalidate(4, events = $$props.events);
+    		if ('lessons' in $$props) $$invalidate(3, lessons = $$props.lessons);
+    		if ('subjects' in $$props) $$invalidate(4, subjects = $$props.subjects);
+    		if ('events' in $$props) $$invalidate(5, events = $$props.events);
     		if ('subjectColorsId' in $$props) subjectColorsId = $$props.subjectColorsId;
-    		if ('calendarList' in $$props) $$invalidate(1, calendarList = $$props.calendarList);
+    		if ('calendarList' in $$props) $$invalidate(2, calendarList = $$props.calendarList);
     		if ('userToken' in $$props) userToken = $$props.userToken;
     	};
 
@@ -1331,6 +1338,7 @@ var app = (function () {
     	}
 
     	return [
+    		name,
     		finish,
     		calendarList,
     		lessons,
@@ -1346,7 +1354,7 @@ var app = (function () {
     class App extends SvelteComponentDev {
     	constructor(options) {
     		super(options);
-    		init(this, options, instance, create_fragment, safe_not_equal, {});
+    		init(this, options, instance, create_fragment, safe_not_equal, { name: 0 });
 
     		dispatch_dev("SvelteRegisterComponent", {
     			component: this,
@@ -1354,6 +1362,21 @@ var app = (function () {
     			options,
     			id: create_fragment.name
     		});
+
+    		const { ctx } = this.$$;
+    		const props = options.props || {};
+
+    		if (/*name*/ ctx[0] === undefined && !('name' in props)) {
+    			console_1.warn("<App> was created without expected prop 'name'");
+    		}
+    	}
+
+    	get name() {
+    		throw new Error("<App>: Props cannot be read directly from the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
+    	}
+
+    	set name(value) {
+    		throw new Error("<App>: Props cannot be set directly on the component instance unless compiling with 'accessors: true' or '<svelte:options accessors/>'");
     	}
     }
 
